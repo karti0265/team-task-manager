@@ -10,9 +10,12 @@ const PORT = process.env.PORT || 5000;
 const JWT_SECRET = process.env.JWT_SECRET || 'team-task-manager-secret-key-2024';
 
 // Middleware
+// app.use(cors({
+//   origin: process.env.FRONTEND_URL || '*',
+//   credentials: true
+// }));
 app.use(cors({
-  origin: process.env.FRONTEND_URL || '*',
-  credentials: true
+  origin: '*'
 }));
 app.use(express.json());
 
